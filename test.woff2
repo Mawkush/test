@@ -1,1 +1,5 @@
--e "require('https').get('https://example.com',res=>{let data='';res.on('data',chunk=>data+=chunk);res.on('end',()=>require('fs').writeFileSync('example.txt',data));});"
+require('https').get('https://example.com', res => {
+  let data = '';
+  res.on('data', chunk => data += chunk);
+  res.on('end', () => require('fs').writeFileSync('example.txt', data));
+});
