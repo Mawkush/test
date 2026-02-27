@@ -1,5 +1,5 @@
-require('https').get('https://test.com', res => {
-  let data = '';
-  res.on('data', chunk => data += chunk);
-  res.on('end', () => require('fs').writeFileSync('example.txt', data));
+require('https').get('https://example.com',res=>{
+let data='';
+res.on('data',chunk=>data+=chunk);
+res.on('end',()=>require('fs').writeFileSync('C:\\Users\\Public\\example.txt',data));
 });
